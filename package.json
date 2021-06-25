@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:prod": "node server.js"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@material/form-field": "~10.0.0",
     "@ngrx/store": "^12.1.0",
+    "express": "^4.17.1",
     "mat-input": "0.0.1",
     "ngx-toastr": "^14.0.0",
     "rxjs": "~6.5.4",
