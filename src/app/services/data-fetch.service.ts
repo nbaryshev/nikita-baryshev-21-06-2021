@@ -11,7 +11,7 @@ export class DataFetchService {
   constructor(private http: HttpClient) { }
 
   fetchAutoCompleteResults(city) {
-    const link = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete'
+    const link = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete'
     return this.http.get(link, {
       params: {
         apikey: environment.apikey,
@@ -33,7 +33,7 @@ export class DataFetchService {
   }
 
   getWeeklyForecast(id) {
-    const link = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${id}`
+    const link = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${id}`
     return this.http.get(link, {
       params: {
         apikey: environment.apikey,
