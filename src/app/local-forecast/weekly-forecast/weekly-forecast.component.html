@@ -1,0 +1,12 @@
+<div class="weekly-forecast-wrapper">
+  <div *ngFor="let dailyForecast of weeklyForecast.DailyForecasts" class="weekly-forecast">
+    <div>{{formateDate(dailyForecast.Date)}}</div>
+    <div>
+      <img src="../../../assets/{{getIconId(dailyForecast)}}.png" alt="">
+    </div>
+    <div class="temp-range">
+      <div>Max: {{dailyForecast.Temperature.Maximum.Value}}°C</div>
+      <div>Min: {{dailyForecast.Temperature.Minimum.Value}}°C</div>
+    </div>
+  </div>
+</div>

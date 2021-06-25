@@ -1,0 +1,24 @@
+<div class="daily-forecast">
+  <span class="city-name">Today's Weather in {{city.name}}</span>
+  <div class="todays-weather-wrapper">
+    <div class="todays-weather">
+      <div class="weather-icon">
+        <img src="../../../assets/{{iconCode}}.png" alt="{{conditions}}">
+      </div>
+      <div class="weather-info">
+        <span>{{temperature}}°С</span>
+        <span>Conditions: {{conditions}}</span>
+        <span>Wind Speed: {{windSpeed}}km/h</span>
+        <span>Humidity: {{humidity}}</span>
+      </div>
+    </div>
+    <div class="add-to-favorites">
+      <fa-icon
+        [icon]="getFavIcon()"
+        alt="getFavIconAltMsg()"
+        class="favorite-icon">
+      </fa-icon>
+      <button class="favorites-button" (click)="changeFavoritesStatus()">{{getButtonText()}}</button>
+    </div>
+  </div>
+</div>

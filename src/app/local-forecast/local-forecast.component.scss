@@ -1,0 +1,20 @@
+.search-field {
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 60px ;
+}
+.forecast-wrapper {
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  min-height: 40px;
+  margin: 60px auto;
+}
+
+
+
+.weekly-forecast-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

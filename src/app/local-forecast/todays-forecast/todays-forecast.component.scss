@@ -1,0 +1,60 @@
+.daily-forecast {
+  padding: 20px;
+  & .city-name {
+    font-size: 18px;
+    word-wrap: break-word;
+  }
+  & .todays-weather-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & .todays-weather {
+      display: flex;
+      margin-top: 20px;
+      & .weather-icon {
+        display: flex;
+        align-items: center;
+      }
+      & .weather-info {
+        display: flex;
+        flex-direction: column;
+        & span:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    & .add-to-favorites {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      & .favorite-icon {
+        color: #F25413;
+        font-size: 25px;
+      }
+      & .favorites-button {
+        background-color: #F25413;
+        height: 30px;
+        width: 135px;
+        color: #FFFFFF;
+        font-weight: 700;
+        border: 0;
+        border-radius: 7px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .daily-forecast {
+    & .todays-weather-wrapper {
+      display: block;
+      & .todays-weather {
+        display: block;
+      }
+      & .add-to-favorites {
+        margin-top: 20px;
+      }
+    }
+  }
+}

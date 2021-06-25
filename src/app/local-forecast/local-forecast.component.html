@@ -1,0 +1,32 @@
+<div class="search-field">
+  <form class="form-wrapper">
+    <mat-form-field class="form-field">
+      <mat-label>City</mat-label>
+      <input matInput
+              type="text"
+              placeholder="Search..."
+              aria-label="City"
+              [matAutocomplete]="auto"
+              [(ngModel)]="cityInput"
+              [ngModelOptions]="{standalone: true}"
+              (ngModelChange)="getAutoCompleteResults()" />
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let city of autoCompleteSearchResults" (click)="cityChoice(city.LocalizedName, city.Key); getCityForecast(city.Key)">
+          {{city.LocalizedName}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+<div class="forecast-wrapper">
+  <app-todays-forecast
+    *ngIf="todaysForecast"
+    [city]="cityDetails"
+    [todaysForecast]="todaysForecast">
+  </app-todays-forecast>
+  <app-weekly-forecast
+    *ngIf="weeklyForecast"
+    class="weekly-forecast-wrapper"
+    [weeklyForecast]="weeklyForecast">
+  </app-weekly-forecast>
+</div>
